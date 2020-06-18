@@ -1,6 +1,19 @@
-# Assignment 1 Report
+### The Luddy Puzzle (Variants of 15 puzzle problem)
 
-### Part 1: The Luddy Puzzle
+#### Initial State:
+
+4X4 Board Configuration with numbers from 0-15(where '0' denotes an empty tile) which is Given as input.
+
+#### Goal State:
+
+Canonical Configuration of the board with numbers 1-15 and 0 at the bottom right tile arranged in order.
+
+|  1    |  2    |   3   |    4  |
+| ---- | ---- | :--: | ---- |
+|   5   |   6   |   7   |    8  |
+|    9  |   10   |  11   |   12   |
+|   13   |   14   |   15   |   0   |
+
 
 1. This is an Informed search problem as we know the goal state. It is 15-puzzle problem, given any board configuration of 4X4 grid with numbers 1 to 15 and one empty tile (represented by 0), we need to arrange it to a state where numbers 1 to 15 are in order with empty tile in last position. The possible moves are, any numbered tile can be swapped with empty tile in different possible ways based on variant given as an argument
 - State Space: All valid board states with legal moves based on the variant
@@ -37,6 +50,10 @@
   - To further improve we have finalised and generalized the heuristic to sum of number of minimum steps each tile takes to go to its goal position with moves based on variant argument
 
 ### Part 2: Road trip!
+
+#### Algorithm to find good driving directions between pairs of cities in USA based on user defined cost functions.
+
+
 - The program uses A* search, using desired heuristics, respective to a particular case until the desired goal state(Destination city) is reached.
 
 - The road-segments.txt is parsed into a dictionary such that each segment has two mappings
@@ -68,6 +85,9 @@ distance to the destination city, we get the admissible heuristic of mpg.
 
 
 ### Part 3: Choosing a team 
+
+#### We have used 0/1 knapsack branch and bound technique to choose a team of robots that has the greatest possible skill
+
 - Unformed search – Need to find a team of robots that has the greatest possible skill (i.e., the sum of the skill levels is as high as possible), with in given budget (B).
 - What is the set of valid states, the successor function, the cost function, the goal state definition, and the initial state?
     - State space: All the combinations of robots with team sizes between 0 to (# of robots in input data).
